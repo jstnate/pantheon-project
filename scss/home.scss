@@ -72,3 +72,107 @@ header {
     }
 }
 
+@media screen and (max-width: 890px) {
+    header {
+        padding: 10px 40px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    header {
+        padding: 10px 80px;
+
+        .header-link {
+            position: absolute;
+            background-color: #f5f5f5;
+            right: -50%;
+            bottom: 0;
+            height: 688px;
+            width: 50%;
+            z-index: -1;
+            border-left: 5px solid #FFA600;
+            opacity: 0;
+            transition: all .5s ease;
+
+            ul {
+                flex-direction: column;
+                margin-top: 100px;
+                height: 200px;
+                justify-content: space-between;
+                
+                a {
+                    font-size: 20px;
+                    color: #FFA600;
+                }
+            }
+        }
+
+        .header-link.active {
+            right: 0;
+            opacity: 1;
+        }
+
+        .btn-burger {
+            display: flex;
+            flex-direction: column;
+            height: 40px;
+            width: 50px;
+            justify-content: space-between;
+            align-items: flex-end;
+            cursor: pointer;
+            
+
+            &:hover hr {
+                background: linear-gradient(to left, #520000,#F50000, #FFA600  80%);
+                width: 100%;
+            }
+
+            hr {
+                border: none;
+                height: 3px;
+                background-color: #FFA600;
+                transition: .4s ease;
+                
+            }
+
+            .st-bar {
+                width: 100%;
+            }
+
+            .nd-bar {
+                width: 40%;
+            }
+
+            .rd-bar {
+                width: 80%;
+            }
+        }
+
+        .btn-burger.active {
+            align-items: center;
+
+            &:hover hr {
+                width: 50%;
+            }
+
+            .st-bar{
+                transform: translateY(19px) rotate(-45deg);
+            }
+
+            .nd-bar {
+                display: none;
+            }
+
+            .rd-bar {
+                transform: translateY(-19px) rotate(45deg);
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+main {
+    position: relative;
+    z-index: -2;
+}
