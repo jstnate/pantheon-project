@@ -1,0 +1,74 @@
+@use "mixins";
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.1);
+
+    a {
+        text-decoration: none;
+    }
+
+    .logo-link {
+        @include mixins.gradientText;
+        font-size: 24px;
+        font-weight: bold;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .header-link ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+        font-size: 18px;
+        
+        a {
+            position: relative;
+            color: #520000;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+
+            &::after {
+                content: "";
+                position: absolute;
+                border-radius: 5px;
+                width: 100%;
+                transform: scaleX(0);
+                height: 3px;
+                bottom: -5px;
+                left: 0px;
+                transform-origin: bottom left;
+                transition: all 0.4s;
+                background: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600  91%);
+            }
+    
+            &:hover {
+                @include mixins.gradientText;
+
+                &::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+                
+            }
+        }
+    }
+
+    .btn-burger {
+        display: none;
+    }
+}
+
