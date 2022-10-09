@@ -87,7 +87,7 @@ header .btn-burger {
     background-color: #f5f5f5;
     right: -50%;
     bottom: 0;
-    height: 690px;
+    height: 90vh;
     width: 50%;
     z-index: 3;
     border-left: 5px solid #520000;
@@ -152,6 +152,11 @@ header .btn-burger {
     width: 100%;
   }
 }
+@media screen and (max-width: 500px) {
+  header {
+    padding: 10px 10px;
+  }
+}
 main {
   position: relative;
   z-index: 0;
@@ -162,6 +167,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 90vh;
+  padding: 50px;
   position: relative;
   display: flex;
   align-items: center;
@@ -178,7 +184,7 @@ main {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .cover-banner div {
-  width: 50%;
+  width: 40%;
   position: relative;
   z-index: 2;
 }
@@ -186,8 +192,7 @@ main {
   width: fit-content;
   margin-bottom: 30px;
   font-size: 64px;
-  color: #520000;
-  color: #ffffff;
+  color: #f5f5f5;
 }
 .cover-banner div p {
   width: fit-content;
@@ -201,58 +206,42 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  width: 40%;
+  gap: 1em;
+  width: 50%;
   height: 50px;
   z-index: 2;
   background-color: #520000;
   text-decoration: none;
   color: #ffffff;
   font-size: 24px;
-  transition: all 0.4s ease;
 }
 .cover-banner div a span {
-  position: absolute;
-  right: 28%;
-  transition: all 0.4s ease;
+  margin-top: 0.5px;
+  transform: translateX(1em);
+  transition: all 0.4s;
 }
 .cover-banner div a i {
-  position: absolute;
-  right: 0;
+  transform: translateX(1em);
   opacity: 0;
-  transition: all 0.4s ease;
+  transition: all 0.4s;
+}
+.cover-banner div a .responsive-icon {
+  display: none;
 }
 .cover-banner div a:hover span {
-  right: 38%;
+  transform: translateX(0);
 }
 .cover-banner div a:hover i {
-  right: 10%;
+  transform: translateX(0);
   opacity: 1;
 }
 
-@media screen and (max-width: 1200px) {
-  .cover-banner div a {
-    width: 40%;
-    height: 50px;
-  }
-  .cover-banner div a span {
-    right: 30%;
-  }
-  .cover-banner div a:hover span {
-    right: 40%;
-  }
-  .cover-banner div a:hover i {
-    right: 10%;
-  }
-}
 @media screen and (max-width: 1120px) {
   .cover-banner div {
     width: 60%;
   }
-}
-@media screen and (max-width: 1000px) {
   .cover-banner div a {
-    width: 50%;
+    width: 40%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -262,17 +251,53 @@ main {
   .cover-banner div {
     width: 80%;
   }
-  .cover-banner div a {
-    width: 40%;
-  }
-  .cover-banner div a span {
-    right: 28%;
-  }
 }
 @media screen and (max-width: 750px) {
+  .cover-banner {
+    background-position: 25% 25%;
+  }
   .cover-banner div a {
-    width: 50%;
     margin: auto;
+  }
+}
+@media screen and (max-width: 680px) {
+  .cover-banner {
+    padding: 0;
+  }
+  .cover-banner div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-link.active {
+    width: 70%;
+  }
+  .cover-banner div a {
+    width: 70%;
+  }
+  .cover-banner div a span {
+    transform: translateX(0);
+  }
+  .cover-banner div a i {
+    display: none;
+    transform: translateX(0);
+  }
+  .cover-banner div a .responsive-icon {
+    display: block;
+    position: static;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cover-banner div {
+    width: 90%;
+  }
+  .cover-banner div a {
+    width: 60%;
   }
 }
 

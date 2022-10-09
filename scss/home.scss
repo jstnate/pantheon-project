@@ -89,7 +89,7 @@ header {
             background-color: #f5f5f5;
             right: -50%;
             bottom: 0;
-            height: 690px;
+            height: 90vh;
             width: 50%;
             z-index: 3;
             border-left: 5px solid #520000;
@@ -172,6 +172,12 @@ header {
     }
 }
 
+@media screen and (max-width: 500px) {
+    header {
+        padding: 10px 10px;
+    }
+}
+
 
 main {
     position: relative;
@@ -183,6 +189,7 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 90vh;
+    padding: 50px;
     position: relative;
     display: flex;
     align-items: center;
@@ -200,13 +207,12 @@ main {
     }
 
     div {
-        width: 50%;
+        width: 40%;
         position: relative;
         z-index: 2;
 
         h1 {
             @include mixins.h1Style;
-            color: #ffffff;
         }
 
         p {
@@ -220,36 +226,38 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            width: 40%;
+            gap: 1em;
+            width: 50%;
             height: 50px;
             z-index: 2;
             background-color: #520000;
             text-decoration: none;
             color: #ffffff;
             font-size: 24px;
-            transition: all .4s ease;
 
             span {
-                position: absolute;
-                right: 28%;
-                transition: all .4s ease;
+                margin-top: .5px;
+                transform: translateX(1em);
+                transition: all .4s;
             }
 
             i {
-                position: absolute;
-                right: 0;
+                transform: translateX(1em);
                 opacity: 0;
-                transition: all .4s ease;
+                transition: all .4s;
+            }
+
+            .responsive-icon {
+                display: none;
             }
 
             &:hover {
                 span {
-                    right: 38%;
+                    transform: translateX(0);
                 }
 
                 i {
-                    right: 10%;
+                    transform: translateX(0);
                     opacity: 1;
                 }
             }
@@ -257,45 +265,13 @@ main {
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .cover-banner {
-        div {
-            a {
-                width: 40%;
-                height: 50px;
-
-                span {
-                    right: 30%;
-                }
-
-                &:hover {
-                    span {
-                        right: 40%;
-                    }
-
-                    i {
-                        right: 10%;
-                    }
-                }
-            }
-        } 
-    }
-}
-
-
 @media screen and (max-width: 1120px) {
     .cover-banner {
         div {
             width: 60%;
-        }
-    }
-}
 
-@media screen and (max-width:1000px) {
-    .cover-banner {
-        div {
             a {
-                width: 50%;
+                width: 40%;
             }
         }
     }
@@ -307,24 +283,72 @@ main {
         
         div {
             width: 80%;
-
-            a {
-                width: 40%;
-
-                span {
-                    right: 28%;
-                }
-            }
         }
     }
 }
 
 @media screen and (max-width: 750px) {
     .cover-banner {
+        background-position: 25% 25%;
+
         div {
             a {
-                width: 50%;
                 margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .cover-banner {
+        padding: 0;
+
+        div {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-link.active {
+        width: 70%;
+    }
+    
+    .cover-banner {
+        div {
+            a {
+                width: 70%;
+
+                span {
+                    transform: translateX(0);
+                }
+
+                i {
+                    display: none;
+                    transform: translateX(0);
+                }
+
+                .responsive-icon {
+                    display: block;
+                    position: static;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cover-banner {
+        div {
+            width: 90%;
+
+            a {
+                width: 60%;
             }
         }
     }
