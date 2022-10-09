@@ -156,6 +156,9 @@ header .btn-burger {
   header {
     padding: 10px 10px;
   }
+  header .header-link.active {
+    width: 70%;
+  }
 }
 main {
   position: relative;
@@ -273,9 +276,6 @@ main {
   }
 }
 @media screen and (max-width: 500px) {
-  .header-link.active {
-    width: 70%;
-  }
   .cover-banner div a {
     width: 70%;
   }
@@ -299,6 +299,19 @@ main {
   .cover-banner div a {
     width: 60%;
   }
+}
+footer {
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px solid #520000;
+}
+footer p {
+  font-weight: bold;
+}
+footer p a {
+  color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */
