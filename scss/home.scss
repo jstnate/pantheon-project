@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    height: 80px;
+    height: 10vh;
     background-color: #f5f5f5;
     display: flex;
     justify-content: space-between;
@@ -21,6 +21,7 @@ header {
         height: 50px;
         display: flex;
         align-items: center;
+        transition: all .4s ease;
 
         i {
             margin-right: 10px;
@@ -52,7 +53,7 @@ header {
                 left: 0px;
                 transform-origin: bottom left;
                 transition: all 0.4s;
-                background: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600  91%);
+                background: #520000;
             }
     
             &:hover {
@@ -81,16 +82,17 @@ header {
 @media screen and (max-width: 810px) {
     header {
         padding: 10px 80px;
+        z-index: 2;
 
         .header-link {
             position: absolute;
             background-color: #f5f5f5;
             right: -50%;
             bottom: 0;
-            height: 688px;
+            height: 690px;
             width: 50%;
-            z-index: -1;
-            border-left: 5px solid #FFA600;
+            z-index: 3;
+            border-left: 5px solid #520000;
             opacity: 0;
             transition: all .5s ease;
 
@@ -102,7 +104,7 @@ header {
                 
                 a {
                     font-size: 20px;
-                    color: #FFA600;
+                    color: #520000;
                 }
             }
         }
@@ -123,14 +125,13 @@ header {
             
 
             &:hover hr {
-                background: linear-gradient(to left, #520000,#F50000, #FFA600  80%);
                 width: 100%;
             }
 
             hr {
                 border: none;
                 height: 3px;
-                background-color: #FFA600;
+                background-color: #520000;
                 transition: .4s ease;
                 
             }
@@ -174,5 +175,87 @@ header {
 
 main {
     position: relative;
-    z-index: -2;
+    z-index: 0;
+
+    .cover-banner {
+        background-image: url('https://medias.monuments-nationaux.fr/var/cmn_inter/storage/images/mediatheque/mediatheque-commune/images/pantheon-panoramique/1217289-1-fre-FR/Pantheon-Panoramique_background-home-expo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 90vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 100px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90vh;
+            z-index: 1;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+        }
+
+        div {
+            width: 50%;
+            // background-color: rgba($color: #E5D3AD, $alpha: 0.7) ;
+            // backdrop-filter: blur(3px);
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+
+            h1 {
+                @include mixins.h1Style;
+                color: #ffffff;
+            }
+
+            p {
+                @include mixins.pStyle;
+                color: #f5f5f5;
+                margin-bottom: 50px;
+            }
+
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                width: 40%;
+                height: 50px;
+                z-index: 2;
+                background-color: #520000;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 24px;
+                transition: all .4s ease;
+
+                span {
+                    position: absolute;
+                    right: 28%;
+                    transition: all .4s ease;
+                }
+
+                i {
+                    position: absolute;
+                    right: 0;
+                    opacity: 0;
+                    transition: all .4s ease;
+                }
+
+                &:hover {
+                    span {
+                        right: 38%;
+                    }
+
+                    i {
+                        right: 10%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }

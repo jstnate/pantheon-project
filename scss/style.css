@@ -1,3 +1,7 @@
+:root {
+  --background-gradient: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600 91%);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +11,7 @@
 
 header {
   width: 100%;
-  height: 80px;
+  height: 10vh;
   background-color: #f5f5f5;
   display: flex;
   justify-content: space-between;
@@ -19,14 +23,13 @@ header a {
   text-decoration: none;
 }
 header .logo-link {
-  background: linear-gradient(to right, #520000 8%, #F50000 40%, #FFA600 91%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #520000;
   font-size: 24px;
   font-weight: bold;
   height: 50px;
   display: flex;
   align-items: center;
+  transition: all 0.4s ease;
 }
 header .logo-link i {
   margin-right: 10px;
@@ -56,12 +59,10 @@ header .header-link ul a::after {
   left: 0px;
   transform-origin: bottom left;
   transition: all 0.4s;
-  background: linear-gradient(to right, #520000 8%, #F50000 40%, #FFA600 91%);
+  background: #520000;
 }
 header .header-link ul a:hover {
-  background: linear-gradient(to right, #520000 8%, #F50000 40%, #FFA600 91%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #520000;
 }
 header .header-link ul a:hover::after {
   transform: scaleX(1);
@@ -69,6 +70,164 @@ header .header-link ul a:hover::after {
 }
 header .btn-burger {
   display: none;
+}
+
+@media screen and (max-width: 890px) {
+  header {
+    padding: 10px 40px;
+  }
+}
+@media screen and (max-width: 810px) {
+  header {
+    padding: 10px 80px;
+    z-index: 2;
+  }
+  header .header-link {
+    position: absolute;
+    background-color: #f5f5f5;
+    right: -50%;
+    bottom: 0;
+    height: 690px;
+    width: 50%;
+    z-index: 3;
+    border-left: 5px solid #520000;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  header .header-link ul {
+    flex-direction: column;
+    margin-top: 100px;
+    height: 200px;
+    justify-content: space-between;
+  }
+  header .header-link ul a {
+    font-size: 20px;
+    color: #520000;
+  }
+  header .header-link.active {
+    right: 0;
+    opacity: 1;
+  }
+  header .btn-burger {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 50px;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  header .btn-burger:hover hr {
+    width: 100%;
+  }
+  header .btn-burger hr {
+    border: none;
+    height: 3px;
+    background-color: #520000;
+    transition: 0.4s ease;
+  }
+  header .btn-burger .st-bar {
+    width: 100%;
+  }
+  header .btn-burger .nd-bar {
+    width: 40%;
+  }
+  header .btn-burger .rd-bar {
+    width: 80%;
+  }
+  header .btn-burger.active {
+    align-items: center;
+  }
+  header .btn-burger.active:hover hr {
+    width: 50%;
+  }
+  header .btn-burger.active .st-bar {
+    transform: translateY(19px) rotate(-45deg);
+  }
+  header .btn-burger.active .nd-bar {
+    display: none;
+  }
+  header .btn-burger.active .rd-bar {
+    transform: translateY(-19px) rotate(45deg);
+    width: 100%;
+  }
+}
+main {
+  position: relative;
+  z-index: 0;
+}
+main .cover-banner {
+  background-image: url("https://medias.monuments-nationaux.fr/var/cmn_inter/storage/images/mediatheque/mediatheque-commune/images/pantheon-panoramique/1217289-1-fre-FR/Pantheon-Panoramique_background-home-expo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+main .cover-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+main .cover-banner div {
+  width: 50%;
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+}
+main .cover-banner div h1 {
+  width: fit-content;
+  margin-bottom: 30px;
+  font-size: 64px;
+  color: #520000;
+  color: #ffffff;
+}
+main .cover-banner div p {
+  width: fit-content;
+  font-size: 20px;
+  color: black;
+  color: #f5f5f5;
+  margin-bottom: 50px;
+}
+main .cover-banner div a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 40%;
+  height: 50px;
+  z-index: 2;
+  background-color: #520000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  transition: all 0.4s ease;
+}
+main .cover-banner div a span {
+  position: absolute;
+  right: 28%;
+  transition: all 0.4s ease;
+}
+main .cover-banner div a i {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+main .cover-banner div a:hover span {
+  right: 38%;
+}
+main .cover-banner div a:hover i {
+  right: 10%;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

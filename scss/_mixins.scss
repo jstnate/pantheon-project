@@ -1,43 +1,34 @@
 @mixin gradientText {
-    background: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600  91%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #520000;
 }
 
 @mixin h1Style {
     width: fit-content;
+    margin-bottom: 30px;
     font-size: 64px;
-    background: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600  91%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #520000;
 }
 
 @mixin h2Style {
     width: fit-content;
     font-size: 48px;
-    background: linear-gradient(to right, #520000,#F50000, #FFA600  20%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #520000;
 }
 
 @mixin h3Style {
     width: fit-content;
     font-size: 40px;
-    background: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600  91%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #520000;
 }
 
 @mixin h4Style {
     width: fit-content;
     font-size: 32px;
-    background: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600  91%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #520000;
 }
 
 @mixin pStyle {
     width: fit-content;
-    font-size: 24px;
+    font-size: 20px;
     color: black;
 }

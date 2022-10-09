@@ -1,5 +1,9 @@
 @use "mixins";
 
+:root {
+    --background-gradient: linear-gradient(to right, #520000 8%,#F50000 40%, #FFA600  91%);
+}
+
 * {
     padding: 0;
     margin: 0;
