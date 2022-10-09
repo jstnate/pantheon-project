@@ -100,6 +100,10 @@ main {
         @include mixins.h2Style;
     }
 
+    .responsive-title {
+        display: none
+    }
+
     p {
         @include mixins.infoStyle;
     }
@@ -125,6 +129,12 @@ main {
             width: 80%;
         }
     }
+
+    .some-infos {
+        p {
+            margin-bottom: 1.5em;
+        }
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -136,6 +146,10 @@ main {
                 margin: auto;
             }
         }
+    }
+
+    .some-infos {
+        padding: 2em 3em 1em;
     }
 }
 
@@ -149,6 +163,18 @@ main {
             flex-direction: column;
             align-items: center;
             text-align: center;
+        }
+    }
+
+    .some-infos {
+        width: 100%;
+
+        h2 {
+            display: none;
+        }
+
+        .responsive-title {
+            display: block;
         }
     }
 }
@@ -174,6 +200,12 @@ main {
                     opacity: 1;
                 }
             }
+        }
+    }
+
+    .some-infos {
+        p {
+            text-align: justify;
         }
     }
 }
