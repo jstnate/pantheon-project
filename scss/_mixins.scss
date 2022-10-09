@@ -11,24 +11,35 @@
 
 @mixin h2Style {
     width: fit-content;
-    font-size: 48px;
+    font-size: 40px;
     color: #520000;
 }
 
 @mixin h3Style {
     width: fit-content;
-    font-size: 40px;
+    font-size: 32px;
     color: #520000;
 }
 
 @mixin h4Style {
     width: fit-content;
-    font-size: 32px;
+    font-size: 24px;
     color: #520000;
 }
 
 @mixin pStyle {
     width: fit-content;
     font-size: 20px;
-    color: black;
+    color: #000000;
+}
+
+@mixin infoStyle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 1em;
+    letter-spacing: .02em;
+
+    strong {
+        color: #520000;
+    }
 }
