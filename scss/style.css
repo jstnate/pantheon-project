@@ -3,6 +3,7 @@
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header {
@@ -263,6 +264,27 @@ main {
   color: #520000;
 }
 
+.short-presentation {
+  width: 80%;
+  margin: 2em auto;
+}
+.short-presentation img {
+  width: 100%;
+}
+.short-presentation .short-pres-text {
+  text-align: center;
+  margin: 2.5em 3em 5em;
+}
+.short-presentation .short-pres-text h2 {
+  font-size: 2em;
+  color: #520000;
+  margin-bottom: 1em;
+}
+.short-presentation .short-pres-text p {
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
 @media screen and (max-width: 1120px) {
   .cover-banner div {
     width: 60%;
@@ -291,6 +313,15 @@ main {
   }
   .some-infos {
     padding: 2em 3em 1em;
+  }
+  .some-infos p {
+    text-align: justify;
+  }
+  .short-presentation {
+    width: 100%;
+  }
+  .short-presentation .short-pres-text p {
+    text-align: justify;
   }
 }
 @media screen and (max-width: 680px) {

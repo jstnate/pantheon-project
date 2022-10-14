@@ -109,6 +109,31 @@ main {
     }
 }
 
+.short-presentation {
+    width: 80%;
+    margin: 2em auto;
+
+    img {
+        width: 100%;
+    }
+
+    .short-pres-text {
+        text-align: center;
+        margin: 2.5em 3em 5em;
+
+        h2 {
+            font-size: 2em;
+            color: #520000;
+            margin-bottom: 1em;
+        }
+
+        p {
+            font-size: 20px;
+            letter-spacing: .02em;
+        }
+    }
+}
+
 @media screen and (max-width: 1120px) {
     .cover-banner {
         div {
@@ -150,6 +175,20 @@ main {
 
     .some-infos {
         padding: 2em 3em 1em;
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .short-presentation {
+        width: 100%;
+
+        .short-pres-text {
+            p {
+                text-align: justify;
+            }
+        }
     }
 }
 
