@@ -84,13 +84,15 @@ header .btn-burger {
   header .header-link {
     position: absolute;
     background-color: #f5f5f5;
-    right: -50%;
+    right: 0;
     bottom: 0;
     height: 90vh;
     width: 50%;
     z-index: 3;
     border-left: 5px solid #520000;
-    opacity: 0;
+    opacity: 1;
+    transform: scaleX(0);
+    transform-origin: right;
     transition: all 0.5s ease;
   }
   header .header-link ul {
@@ -104,8 +106,7 @@ header .btn-burger {
     color: #520000;
   }
   header .header-link.active {
-    right: 0;
-    opacity: 1;
+    transform: scaleX(1);
   }
   header .btn-burger {
     display: flex;
