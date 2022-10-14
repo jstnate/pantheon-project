@@ -25,6 +25,7 @@ header {
 
         i {
             margin-right: 10px;
+            font-size: 1.5em;
         }
     }
 
@@ -41,6 +42,7 @@ header {
             font-weight: bold;
             display: flex;
             flex-direction: column;
+            padding: 10px 0 10px;
 
             &::after {
                 content: "";
@@ -49,7 +51,7 @@ header {
                 width: 100%;
                 transform: scaleX(0);
                 height: 3px;
-                bottom: -5px;
+                bottom: 5px;
                 left: 0px;
                 transform-origin: bottom left;
                 transition: all 0.4s;
