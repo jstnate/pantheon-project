@@ -1,5 +1,6 @@
-@use "reset";
-@use "header";
-@use "home-page";
-@use "creation-page";
-@use "footer";
+@use "bases/reset";
+@use "layouts/header";
+@use "pages/home-page";
+@use "pages/creation-page";
+@use "pages/histoire-page";
+@use "layouts/footer";
