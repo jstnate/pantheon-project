@@ -502,7 +502,7 @@ main {
     margin-top: 2em;
   }
 }
-.main-title {
+.main-title-banner {
   background-color: #520000;
   width: 100%;
   height: 30vh;
@@ -510,48 +510,48 @@ main {
   align-items: center;
   justify-content: center;
 }
-.main-title div {
+.main-title-banner div {
   position: relative;
 }
-.main-title div::before, .main-title div::after {
+.main-title-banner div::before, .main-title-banner div::after {
   content: "";
   position: absolute;
   height: 50px;
   width: 50px;
 }
-.main-title .crypt-title-border {
+.main-title-banner .crypt-title-border {
   height: 20vh;
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main-title .crypt-title-border::before {
+.main-title-banner .crypt-title-border::before {
   height: 5px;
   width: 75%;
   left: 0;
   top: 0;
   background-color: #ffffff;
 }
-.main-title .crypt-title-border::after {
+.main-title-banner .crypt-title-border::after {
   height: 5px;
   width: 75%;
   right: 0;
   bottom: 0;
   background-color: #ffffff;
 }
-.main-title .crypt-title-border h1 {
+.main-title-banner .crypt-title-border h1 {
   color: #ffffff;
   font-size: 48px;
 }
-.main-title .hist-title-border {
+.main-title-banner .hist-title-border {
   height: 20vh;
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main-title .hist-title-border::before {
+.main-title-banner .hist-title-border::before {
   height: 50px;
   width: 50px;
   left: 0;
@@ -559,7 +559,7 @@ main {
   border-top: 5px solid #ffffff;
   border-left: 5px solid #ffffff;
 }
-.main-title .hist-title-border::after {
+.main-title-banner .hist-title-border::after {
   height: 50px;
   width: 50px;
   right: 0;
@@ -567,7 +567,7 @@ main {
   border-bottom: 5px solid #ffffff;
   border-right: 5px solid #ffffff;
 }
-.main-title .hist-title-border h1 {
+.main-title-banner .hist-title-border h1 {
   color: #ffffff;
   font-size: 48px;
 }
@@ -649,7 +649,7 @@ main {
 }
 
 @media screen and (max-width: 900px) {
-  .main-title .hist-title-border, .main-title .crypt-title-border {
+  .main-title-banner .hist-title-border, .main-title-banner .crypt-title-border {
     width: 60%;
   }
 }
@@ -666,7 +666,7 @@ main {
   }
 }
 @media screen and (max-width: 650px) {
-  .main-title .hist-title-border, .main-title .crypt-title-border {
+  .main-title-banner .hist-title-border, .main-title-banner .crypt-title-border {
     width: 80%;
   }
   .key-history {
@@ -686,7 +686,7 @@ main {
     width: 100%;
   }
 }
-.card-section {
+.people-card-section {
   width: 95%;
   margin: 2em auto;
   display: grid;
@@ -694,65 +694,65 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-auto-flow: dense;
 }
-.card-section .people-card {
+.people-card-section .people-card {
   height: fit-content;
   background-color: #F5F5F5;
   padding: 2em 2em 1em;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.card-section .people-card .people-main-infos {
+.people-card-section .people-card .people-main-infos {
   display: flex;
   gap: 30px;
   margin-bottom: 20px;
 }
-.card-section .people-card .people-main-infos img {
+.people-card-section .people-card .people-main-infos img {
   min-width: 180px;
   height: 250px;
   object-fit: cover;
   object-position: center;
 }
-.card-section .people-card .people-main-infos .people-infos {
+.people-card-section .people-card .people-main-infos .people-infos {
   width: 100%;
 }
-.card-section .people-card .people-main-infos .people-infos .people-civil {
+.people-card-section .people-card .people-main-infos .people-infos .people-civil {
   margin-bottom: 25px;
 }
-.card-section .people-card .people-main-infos .people-infos .people-civil h2 {
+.people-card-section .people-card .people-main-infos .people-infos .people-civil h2 {
   font-size: 28px;
   color: #520000;
 }
-.card-section .people-card .people-main-infos .people-infos .people-civil h2 span {
+.people-card-section .people-card .people-main-infos .people-infos .people-civil h2 span {
   margin-left: 30px;
 }
-.card-section .people-card .people-main-infos .people-infos .people-civil p {
+.people-card-section .people-card .people-main-infos .people-infos .people-civil p {
   color: #828282;
   font-size: 18px;
   margin-left: 60px;
 }
-.card-section .people-card .people-main-infos .people-infos .people-crypt-infos p {
+.people-card-section .people-card .people-main-infos .people-infos .people-crypt-infos p {
   font-size: 20px;
   color: #520000;
 }
-.card-section .people-card .people-main-infos .people-infos .people-crypt-infos ul {
+.people-card-section .people-card .people-main-infos .people-infos .people-crypt-infos ul {
   margin: 10px 0 20px 20px;
 }
-.card-section .people-card .people-main-infos .people-infos .people-crypt-infos ul li {
+.people-card-section .people-card .people-main-infos .people-infos .people-crypt-infos ul li {
   font-size: 18px;
   color: #828282;
 }
-.card-section .people-card .people-main-infos .people-infos .people-crypt-infos span {
+.people-card-section .people-card .people-main-infos .people-infos .people-crypt-infos span {
   color: #828282;
   font-size: 18px;
   margin-left: 20px;
 }
-.card-section .people-card .people-bio {
+.people-card-section .people-card .people-bio {
   text-align: justify;
   height: 0;
   opacity: 0;
   transition: all 0.4s;
   font-size: 0;
 }
-.card-section .people-card:hover .people-bio {
+.people-card-section .people-card:hover .people-bio {
   opacity: 1;
   font-size: 18px;
   height: 100%;
@@ -783,40 +783,40 @@ main {
 }
 
 @media screen and (max-width: 1100px) {
-  .card-section .people-card .people-main-infos .people-infos .people-civil h2 {
+  .people-card-section .people-card .people-main-infos .people-infos .people-civil h2 {
     display: flex;
     flex-direction: column;
   }
 }
 @media screen and (max-width: 750px) {
-  .card-section {
+  .people-card-section {
     width: 80%;
   }
-  .card-section .people-card .people-main-infos .people-infos .people-civil h2 {
+  .people-card-section .people-card .people-main-infos .people-infos .people-civil h2 {
     flex-direction: row;
     gap: 10px;
   }
-  .card-section .people-card .people-main-infos .people-infos .people-civil h2 span {
+  .people-card-section .people-card .people-main-infos .people-infos .people-civil h2 span {
     margin-left: 0;
   }
-  .card-section .people-card .people-main-infos .people-infos .people-civil p {
+  .people-card-section .people-card .people-main-infos .people-infos .people-civil p {
     margin-left: 20px;
   }
 }
-@media screen and (max-width: 550px) {
-  .card-section {
+@media screen and (max-width: 600px) {
+  .people-card-section {
     width: 95%;
   }
 }
 @media screen and (max-width: 480px) {
-  .card-section .people-card .people-main-infos .people-infos .people-civil h2 {
+  .people-card-section .people-card .people-main-infos .people-infos .people-civil h2 {
     gap: 0;
     flex-direction: column;
   }
-  .card-section .people-card .people-main-infos .people-infos .people-civil h2 span {
+  .people-card-section .people-card .people-main-infos .people-infos .people-civil h2 span {
     margin-left: 30px;
   }
-  .card-section .people-card .people-main-infos .people-infos .people-civil p {
+  .people-card-section .people-card .people-main-infos .people-infos .people-civil p {
     margin-left: 60px;
   }
 }

@@ -1,4 +1,4 @@
-.main-title {
+.main-title-banner {
     background-color: #520000;
     width: 100%;
     height: 30vh;
@@ -168,7 +168,7 @@
 }
 
 @media screen and (max-width: 900px) {
-    .main-title {
+    .main-title-banner {
         .hist-title-border, .crypt-title-border {
             width: 60%;
         }
@@ -191,7 +191,7 @@
 }
 
 @media screen and (max-width: 650px) {
-    .main-title {
+    .main-title-banner {
         .hist-title-border, .crypt-title-border {
             width: 80%;
         }
