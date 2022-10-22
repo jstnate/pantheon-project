@@ -92,6 +92,7 @@ header {
             right: 0;
             bottom: 0;
             height: 90vh;
+            height: -webkit-fill-available;
             width: 50%;
             z-index: 3;
             border-left: 5px solid #520000;
