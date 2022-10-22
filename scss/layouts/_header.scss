@@ -90,10 +90,9 @@ header {
             position: absolute;
             background-color: #f5f5f5;
             right: 0;
-            top: 10vh;
-            height: 80vh;
-            height: -webkit-fill-available;
-            width: 50%;
+            top: 25%;
+            height: 50vh;
+            width: 50% !important;
             z-index: 3;
             border-left: 5px solid #520000;
             opacity: 1;
